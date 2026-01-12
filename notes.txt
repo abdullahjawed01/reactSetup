@@ -1,0 +1,171 @@
+// What is react 7
+
+React is JS library used ot build user interface, espescially single-page application (SPAs).
+
+Why React exists 
+
+Traditional JS:
+Manually udpate DOM
+Messy with event handling
+Hard to escape 
+
+React:
+-UI is broken into components
+-UI updates automatically when data changes 
+-Much easier to reason about complex apps
+
+
+History of React 
+
+Origins & Invention(2011-2013)
+ := 2011- Created at Facebook by Jordan walks(inspired by XHP, a PHP components framework)
+ :=2012 - Used internally in Facebook News Feed 
+ :=2013- Open-Source at JSConf US.
+        .. JSX(HTML in JS ) was initially controversial.
+
+
+Growth & Adoptation (2014-2016)
+-2014-Used in Instangram.com 
+-2015-React Native announced (React for mobile)
+-2016-Create React App launched for boostrapping React apps.
+
+MOdern Evolution 
+
+-2019 - Hooks introduced in React 16.8, revolutionizing state management in functional components.
+-Today:- React Powers FaceBook,Instangram,Netflix,Airbnb, and more 
+.Its also the core of NEXT.Js, the most popular full-stack React framework
+ 
+
+React DOM and JAVA SCRIPT Essentials 
+
+Understanding the DOM in React 
+
+Virtual DOM:-
+
+-- A lightweight JS object represenitng in the UI 
+-- stored in memory as JS object
+-- Very fast to update 
+-- Used with React (React.createElement or JSX)
+-- What is it? A virtual copy of the real DOM kept in memory 
+
+Example:
+
+{
+    types:"h1",
+    props:{
+        children:"Hello World"
+    }
+}
+
+
+
+Summary 
+
+feature.  Virtual DOM.    Real DOM 
+Spped  .   Fast.            Slow 
+Storage    in Menory        Browser
+updates     Smart Diffing   Full re-render 
+Manipulation React Logic.   Browser API 
+
+
+Library VS Framework 
+
+Library -Like your toy Box 
+-You use only what you want 
+-You control the flow 
+-Examples:Ract,Lodash,jQuery,Axios
+
+Framework-Like LEGO instructions 
+
+-Structure is Defined. 
+-You follow the rules 
+-Examples: Angular,Express,Django 
+
+
+
+what is CDN? 
+CDN=Content Delivery Network 
+Network of global servers that deliver content faster
+
+
+Benefits: 
+-faster Load times
+-Reduced server Load 
+-Better Availability 
+
+
+why is React Called "React"? 
+ - Rects to data changes by updating UI efficiently using Virtual DOM 
+
+
+Differnce BTW React and React-DOM 
+
+.React = Core logic (Components,hooks,state)
+.reactDOM = Conneects React with the actual DOM
+
+ FIle            Purpose           Minified          Warnings 
+
+ Development    Decv Mode           NO                  yes 
+ Prodcution     Live mode           Yes                 NO 
+
+
+
+Remember:
+react Element is an OBject, Not HTML
+
+React only runs inside the root html
+
+
+
+
+JSX  vs React.createElement 
+const heading = <h1>Hello From React </h1>
+
+
+
+3.Bundlers: Your shipping element 
+
+A bundler takes all your source assets & outputs an optimised bundle that browser can download 
+
+Typical pipeline:
+1.Read every L import/ require
+2.Transpite (JSX -> Js,TS -> js, etc)
+3.COncatenate / codee split 
+4.Minify& tree-shake unsused code 
+5.Generate hashed filenames for long-term cahcing
+6. Server with HMR (HOT modules replacemnents ) during developement
+
+
+
+Popular optiosn for react 
+
+Bundler.                highlights
+
+
+Webpack         The most flexible & battle-tested large plugin ecosystme 
+Vite.           Next-gen, instant dev server via natice ES modules, uyses Rollup for Prodcution . React is depreciated 
+Parcel.         Zero-coding,smart Defaults,blazing-fast builds thanks to a C++ core .GReat for begginers 
+
+
+
+DEV and Dev dependencies 
+
+Purpose.                                                         Installl COmmands.                                      Stored Under 
+Runtime/Prodcution code                                           npm unstall axios                                      dependencies
+tooling needed only while develeoping                             npm install -D eslint(alias --save-dev)                 Dev dependencies
+
+
+npm uninstall <package-name>
+
+
+
+5. Version Ranges:    ^.  versus ~ 
+
+symbol.                   Allows updates to.            Example 
+^caret                    minor and patch Version     17.0.2. 17.1.0. but not 18.0.0 
+~tilde                    Patch verisons onluy          17.0.2. 17.0.9 ... but not 17.1.0                    
+
+19.2.5.   semver 
+        semantic Version    
+        where 19. is major 
+        where 5. is patch 
