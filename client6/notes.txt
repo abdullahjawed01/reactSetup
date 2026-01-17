@@ -1,0 +1,98 @@
+Why React?
+
+write evrything we do in React can technically be done in plain html,css. and js react allows
+
+
+. Better code3 reuse 
+. largee-scle performance in production 
+. clear seperation of concernsvia components
+.easier maintainence and testing
+
+
+Folder Structure 
+
+Industry Standard Folder Layout 
+
+src/ 
+    components/
+    Pages/
+    Utils/
+
+
+
+.jsx vs .js. - whcih one for components?
+
+Use.jsx for files contaitning JSX 
+
+const myComponent = () =>{
+    return <h1> Hello world </h1> 
+}
+
+export defuakt myComponent
+
+
+PROS of .jsx 
+
+.Clarity Indicator the presence of JSX 
+.better editor support (higlighting initing )
+.Matches community converstion
+
+Your cant use .js but 
+
+cons. 
+.Misleading for JSX contaitning files.
+.May confuse older tooling
+.less expressive in file lists
+
+
+best Practice 
+Use .jsx for components
+Use .js for utilites config, and non-JSX logic
+
+Importing files in react
+
+
+you can import like this
+
+import Header from. "./components/Header.jsx"
+
+or skip the extension: 
+
+import Header from "./components/Header"
+
+Note:The .jsx extension is optional whils importing 
+
+Constans & static Data 
+
+Dont keep large static darta or hardcoded strings inside components 
+
+Instead, extract to Utils/
+
+export const CDN_Link = "https://cdn.delivery.com"
+export const URL = "https://suhail.app"
+
+// utils/mockdata.js
+
+const data = {
+    // complete large data set 
+}
+
+export default data
+
+
+Export tips 
+
+import {CDN_Link,URL } from "../utils/components"
+
+export default data 
+
+
+import data from ""../utils/mockdata"
+
+
+File Size Guidlines 
+
+.Avoid files longer than 100 lines 
+. if you exceed that ,refactor into smaller components or files 
+
+Follow these practices to keep your react project clean , scalable, and production-ready/ 
